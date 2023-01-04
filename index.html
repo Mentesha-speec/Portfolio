@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src='./scripts/typeEffect.js' defer></script>
+    
+    <link rel='icon' href='https://rezi-gelenidze.github.io/portfolio/img/etc/logo.png'>
+    
+    <title>My portfolio</title>
+</head>
+<body>
+    <nav id='navbar' class="navbar">
+        <img class='nav-logo' src="img/icon.png.png">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#welcome-section" class="nav-link">Welcome</a>
+            </li>
+            <li class="nav-item">
+                <a href="#about-me" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills" class="nav-link">Skills & Experience</a>
+            </li>
+            <ll class='nav-item'>
+                <a href="#projects" class="nav-link">Projects</a>
+            </ll>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <img class='toggler' src='img/etc/bars.svg' />
+        </div>
+    </nav>
+
+    <header id='welcome-section'>
+        <h1 class="page-title">
+            <span id='type-area' class='white'></span>
+            <span class='cursor'>Hello&world!</span><br>
+            I am Giorgi Mantashashvili. <br>
+            Welcome to my portfolio!
+        </h1>
+    </header>
+
+    <section id='about-me'>
+        <h2 class='section-head'>About me</h2>
+        
+        <article>
+            <p>
+                <h1>hello  world  i am giori mantashashvili and iw
+
+                    assdjsijidwashudhellow world i am giorgi mantashasshsivli
+                    adn i wish you look my portfoilio i wish yu atiasiashdidhwhdiwdhiwh
+                </h1>
+            </p>
+            <img src='img/giorgi.jpg' />
+        </article>
+    </section>
+
+    <section id='skills'>
+        <h2 class='section-head'>Technical Skills</h2>
+        <div id='skill-bar'>
+            
+
+            <div class='skill'>
+                <img src='img/javasctipt.png' />
+                <span>Javascript</span>
+            </div>
+
+            <div class='skill'>
+                <img src='img/html5.png' />
+                <span>HTML5</span>
+            </div>
+
+            <div class='skill'>
+                <img src='img/css3.png' />
+                <span>CSS3</span>
+            </div>    
+        </div>
+
+        <h2 class="section-head">Experience</h2>
+        
+        
+        <div id='courses'>
+            <div class='course'>
+                <span>Harvard CS50's Understanding Technology</span>
+                <p>
+                    This is CS50’s introduction to the world of technology. It includes
+                    topics like hardware, internet, security, multimedia and etc.
+                </p>
+                <img src='img/cs50.png' />
+            </div>
+           
+                <a href='https://freecodecamp.org/certification/rezi%20gelenidze/responsive-web-design' target="_blank">
+                    View certificate
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id='projects'>
+        <h2 class="section-head">Projects</h2>
+
+
+        <div id='projects-container'>
+            <div class="project-tile">
+                <span class='title'>URL shortener</span>
+                <img src='img/previews/shortener.gif' />
+                <p class='description'>
+                    URL shortener web app. Includes url management system for it. <br />
+                    View on 
+                    <a href='https://github.com/rezi-gelenidze/CS50W-Projects/tree/master/Final%20-%20URL%20shortener' target="_blank">
+                        Github
+                    </a> 
+
+                    <br />
+
+                    View 
+                    <a href='https://s50.herokuapp.com/' target="_blank">
+                        Deployment
+                    </a>
+                </p>
+                <span class="date">Jun 10, 2021</span>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id='contact'>
+            <h2 class='section-head'>Contact</h2>
+
+            <div class='socials'>
+                <div class='social'>
+                    <a id='profile-link' href='#' target="_blank">
+                        <img src='img/github.png.png'>
+                    </a>
+                    <span>@mentesha_speec</span> 
+                </div>
+
+                <div class='social'>
+                    <a href='https://www.facebook.com/giorgi.mantashashvili.52' target="_blank">
+                        <img src='img/facebook.png.png'>
+                    </a>
+                    <span>@გიორგი</span>
+                    <span>მანთაშაშვილი</span> 
+                </div>
+
+                <div class='social'>
+                    <a href='https://www.instagram.com/mantashashviliii/' target="_blank">
+                        <img src='img/instagram.png.png'>
+                    </a>
+                    <span>@Mantashashviliii</span> 
+                </div>
+
+                <div class='social'>
+                    <a href='#'>
+                        <img src='img/email.png.png'>
+                    </a>
+                    <span>mantashashvili17@gmail.com</span> 
+                </div>
+            </div>
+    </section>
+
+    <script>
+        // script for responsive navbar collapsing
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+      
+    </script>
+</body>
+</html>
